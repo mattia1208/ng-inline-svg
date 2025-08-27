@@ -181,7 +181,7 @@ export class InlineSVGDirective implements OnInit, OnChanges, OnDestroy {
       // Force element to be inside the directive element inside of adjacent
       this._renderer.appendChild(
         this._el.nativeElement,
-        this._svgComp.injector.get(InlineSVGComponent)._el.nativeElement
+        this._svgComp.instance._el.nativeElement
       );
     } else {
       this._inlineSVGService.insertEl(this, this._el.nativeElement, el, this.replaceContents, this.prepend);
